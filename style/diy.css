@@ -1,0 +1,911 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #fcf8e8; 
+
+}
+
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #2ecc71;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+}
+.btn-top:hover {
+  background-color: #27ae60;
+  outline: none;
+}
+
+
+
+
+
+/***** FIRST SECTION SETTINGS START *****/
+
+
+.first_section{
+    top: 5%;
+    left: 5%;
+    position: absolute;
+    width: 90%;
+    height: 90vh;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px  rgba(255, 255, 255, 0.2),
+                15px 15px 15px   rgba(0, 0, 0, 0.1) 
+}
+
+.first_section h1{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    width: 100%;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .first_section h2{
+    position: absolute;
+    text-transform: uppercase;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+  
+  }
+  #upload-svg{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 80vh;
+    width: auto;
+  }
+
+  #fileToUpload{
+    font-size: 1.2em;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #207561;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #207561;
+    cursor: pointer;
+
+  }
+
+
+/***** FIRST SECTION SETTINGS END *****/
+
+/***** SECOND SECTION SETTINGS START *****/
+
+
+.second_section{
+    top: 100%;
+    left: 5%;
+    position: absolute;
+    width: 90%;
+    height: 90vh;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px  rgba(255, 255, 255, 0.2),
+                15px 15px 15px   rgba(0, 0, 0, 0.1)
+    
+}
+
+.second_section h1{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    width: 100%;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .second_section h2{
+    position: absolute;
+    text-transform: uppercase;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #ff3796 ;
+  
+  }
+
+
+  #f-row{
+      top: 25%;
+      left: 50%;
+      padding: 15px;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      width: 90%;
+
+
+
+
+  }
+
+  #size-col{
+    height: 15vh;
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+#size-col input{
+    position: absolute;
+    top: 95%;
+    left: 35%;
+    text-transform: uppercase;
+    font-family: 'Concert One', cursive;
+}
+#size-col h3{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-family: 'Concert One', cursive;
+}
+
+input[type="radio"]{
+    -webkit-appearance: none;
+  }
+
+  label{
+    z-index: 100;
+    justify-self: center;
+    height: 100px;
+    width: 150px;
+    margin: auto;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 500px;
+    padding: 10px;
+    margin-bottom: 1em;
+  }
+
+  .pot-image{
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+  
+  }
+
+  input[type="radio"]:checked + label>.pot-image{
+  background: linear-gradient(89deg, #74b49b, #5f1854);
+  background-size: 400% 400%;
+  -webkit-animation: pot-image 5s ease infinite;
+  -moz-animation: pot-image 5s ease infinite;
+  animation: pot-image 5s ease infinite;
+  border-radius: 70px;
+  transition: all .5s ease-in-out;
+}
+
+@-webkit-keyframes pot-image {
+  0%{background-position:0% 49%}
+  50%{background-position:100% 52%}
+  100%{background-position:0% 49%}
+}
+@-moz-keyframes pot-image {
+  0%{background-position:0% 49%}
+  50%{background-position:100% 52%}
+  100%{background-position:0% 49%}
+}
+@keyframes pot-image{
+  0%{background-position:0% 49%}
+  50%{background-position:100% 52%}
+  100%{background-position:0% 49%}
+
+}
+
+
+
+
+#s-row{
+    padding: 15px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 90%;
+
+
+
+
+  }
+#color-col{
+    height: 15vh;
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+
+.pot-color-1, .pot-color-2, .pot-color-3, .pot-color-4, .pot-color-5, .pot-color-6 {
+    width: auto;
+    height: 8vh;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    padding: 5px;
+  
+  }
+  
+  label h3{
+    font-size: 1em;;
+      margin: auto;
+      top: 110%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      color: #313848;
+     text-shadow:  3px 3px 3px rgba(0, 0, 0, 0.25);
+      text-transform: uppercase;
+      transition: 0.5s;
+      font-family: 'Concert One', cursive;
+
+  
+    }
+  
+  input[type="radio"]:checked + label>.pot-color-1{
+    background: linear-gradient(89deg, #ff0000, #d34848);
+    background-size: 400% 400%;
+    -webkit-animation: pot-color-1 5s ease infinite;
+    -moz-animation: pot-color-1 5s ease infinite;
+    animation: pot-color-1 5s ease infinite;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+  
+  }
+  
+  
+  @-webkit-keyframes pot-color-1 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-color-1 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-color-1{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+  
+  
+  input[type="radio"]:checked + label>.pot-color-2{
+    background: linear-gradient(89deg, #207561, #6fb98f);
+    background-size: 400% 400%;
+    -webkit-animation: pot-color-2 5s ease infinite;
+    -moz-animation: pot-color-2 5s ease infinite;
+    animation: pot-color-2 5s ease infinite;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+  }
+  
+  @-webkit-keyframes pot-color-2{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-color-2 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-color-2{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+  
+  input[type="radio"]:checked + label>.pot-color-3{
+    background: linear-gradient(89deg, #dfdfdf, #c1c1c1);
+    background-size: 400% 400%;
+    -webkit-animation: pot-color-3 5s ease infinite;
+    -moz-animation: pot-color-3 5s ease infinite;
+    animation: pot-color-3 5s ease infinite;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+  }
+  
+  @-webkit-keyframes pot-color-3 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-color-3 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-color-3{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+  
+  
+  input[type="radio"]:checked + label>.pot-color-4{
+    background: linear-gradient(89deg, #0779e4, #005082);
+    background-size: 400% 400%;
+    -webkit-animation: pot-color-4 5s ease infinite;
+    -moz-animation: pot-color-4 5s ease infinite;
+    animation: pot-color-4 5s ease infinite;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+  }
+  
+  @-webkit-keyframes pot-color-4 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-color-4 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-color-4{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+  
+  input[type="radio"]:checked + label>.pot-color-5{
+    background: linear-gradient(89deg, #ffcc00, #fff1ac);
+    background-size: 400% 400%;
+    -webkit-animation: pot-color-5 5s ease infinite;
+    -moz-animation: pot-color-5 5s ease infinite;
+    animation: pot-color-5 5s ease infinite;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+  }
+  
+  @-webkit-keyframes pot-color-5 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-color-5 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-color-5{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+  
+  
+  input[type="radio"]:checked + label>.pot-color-6{
+    background: linear-gradient(89deg, #cc0e74, #43d8c9, #ea6227);
+    background-size: 400% 400%;
+    -webkit-animation: pot-color-6 5s ease infinite;
+    -moz-animation: pot-color-6 5s ease infinite;
+    animation: pot-color-6 5s ease infinite;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+  }
+  
+  @-webkit-keyframes pot-color-6 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-color-6 {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-color-6{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+
+
+
+.pot-material{
+    width: auto;
+    height: 8vh;
+    margin: auto;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 70px;
+    transform: translate(-50%,-50%);
+    transition: 0.2s;
+  
+  }
+  
+  input[type="radio"]:checked + label>.pot-material{
+    background: linear-gradient(89deg, #560d0d, #ffffc1);
+    background-size: 400% 400%;
+    -webkit-animation: pot-material 5s ease infinite;
+    -moz-animation: pot-material 5s ease infinite;
+    animation: pot-material 5s ease infinite;
+    border-radius: 5px;
+  
+    transition: all .5s ease-in-out;
+  }
+  
+  @-webkit-keyframes pot-material{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @-moz-keyframes pot-material {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  }
+  @keyframes pot-material{
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+  
+  }
+
+  #t-row{
+    top: 75%;
+    left: 50%;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 90%;
+}
+
+    #material-col{
+    height: 15vh;
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+/***** SECOND SECTION SETTINGS END *****/
+
+
+/***** THIRD SECTION SETTINGS START *****/
+
+.third_section{
+    top: 200%;
+    left: 5%;
+    position: absolute;
+    width: 90%;
+    height: 90vh;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px  rgba(255, 255, 255, 0.2),
+                15px 15px 15px   rgba(0, 0, 0, 0.1)
+    
+}
+
+.third_section h1{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-size: 2.5em;
+    width: 100%;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .third_section h2{
+    position: absolute;
+    text-transform: uppercase;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+  
+  }
+
+  #total_price{
+    color: #ff3796;
+  }
+
+  #finish-svg{
+    left: 65%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 80vh;
+    width: auto;
+  }
+  #addtocart{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+  #submit{
+    z-index: 1000 ;
+    font-size: 1.8em;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    border: 2px solid #207561;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  #submit:hover{
+    background-color: #207561;
+    color: white;
+  }
+
+  .details{
+      text-align: center;
+      width: 30%;
+      z-index: 100;
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+
+  #finish-input{
+    width: 100%;
+    margin: 5px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #e4e4e4;
+    border: 2px dashed  #20716a;
+  }
+
+/***** THIRD SECTION SETTINGS END *****/
+
+@media only screen and (max-width: 1024px){
+
+    .first_section{
+        top: 5%;
+        left: 5%;
+        position: absolute;
+    
+    }
+        
+    .first_section h1{
+        font-size: 2.5em;
+      }
+    
+      .first_section h2{
+        font-size: 2em;
+        width: 90%;
+        top: 20%;
+    
+      }
+    
+      #upload-svg{
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        height: 60vh;
+        width: auto;
+      }
+    
+      #fileToUpload{
+        font-size: 1.6em;
+        top: 35%;
+      }
+
+      .third_section h1{
+        font-size: 2.5em;
+      }
+    
+      .third_section h2{
+        font-size: 2em;
+        width: 90%;
+        top: 15%;
+      }
+    
+      #finish-svg{
+        left: 80%;
+        top: 70%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        height: 60vh;
+        width: auto;
+      }
+    
+      #submit{
+        font-size: 1.5em;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+      }
+    
+      .details{
+          width: 50%;
+    
+      }
+    
+      #finish-input{
+        width: 100%;
+        margin: 5px;
+        font-size: 1.5em;
+        border: none;
+      }
+}
+@media only screen and (max-width: 768px){
+
+    .first_section{
+        top: 5%;
+        left: 5%;
+        position: absolute;
+    
+    }
+        
+    .first_section h1{
+        font-size: 2em;
+      }
+    
+      .first_section h2{
+        font-size: 1.5em;
+        width: 90%;
+        top: 20%;
+    
+      }
+    
+      #upload-svg{
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        height: 55vh;
+        width: auto;
+      }
+    
+      #fileToUpload{
+        font-size: 1.2em;
+        top: 35%;
+      }
+
+      .third_section h1{
+        font-size: 2em;
+      }
+    
+      .third_section h2{
+        font-size: 1.5em;
+        width: 90%;
+        top: 15%;
+      }
+    
+      #finish-svg{
+        left: 78%;
+        top: 70%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        height: 55vh;
+        width: auto;
+      }
+    
+      #submit{
+        font-size: 1em;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+      }
+    
+      .details{
+          width: 50%;
+    
+      }
+    
+      #finish-input{
+        width: 100%;
+        margin: 5px;
+        font-size: 1em;
+        border: none;
+      }
+
+
+}
+@media only screen and (max-width: 420px){
+
+.first_section{
+    top: 5%;
+    left: 5%;
+    position: absolute;
+
+}
+    
+.first_section h1{
+    font-size: 1.5em;
+  }
+
+  .first_section h2{
+    font-size: 1em;
+    width: 90%;
+    top: 20%;
+
+  }
+
+  #upload-svg{
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 50vh;
+    width: auto;
+  }
+
+  #fileToUpload{
+    font-size: 0.7em;
+    top: 35%;
+  }
+
+
+  .second_section h1{
+    font-size: 1.3em;
+  }
+
+  .second_section h2{
+    font-size: 0.8em;
+  }
+
+  .second_section h3{
+    font-size: 0.8em;
+  }
+
+  label h3{
+      padding: 1px;
+    font-size: 1em;;
+      margin: auto;
+      top: 90%;
+  }
+
+  #t-row{
+    top: 80%;
+    box-shadow: none
+
+  }
+
+  #s-row{
+      top: 55%;
+      box-shadow: none
+
+    }
+
+#f-row{
+    height: 20vh;
+    box-shadow: none
+    }  
+
+  .third_section h1{
+    font-size: 1.5em;
+  }
+
+  .third_section h2{
+    font-size: 1em;
+    width: 90%;
+    top: 15%;
+  }
+
+  #finish-svg{
+    left: 80%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 50vh;
+    width: auto;
+  }
+
+  #submit{
+    font-size: 1em;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+  }
+
+  .details{
+      width: 50%;
+
+  }
+
+  #finish-input{
+    width: 100%;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+  }
+}
+
+
+
+
+
+
+

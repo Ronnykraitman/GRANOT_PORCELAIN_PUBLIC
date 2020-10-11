@@ -1,0 +1,548 @@
+
+/***** GENERAL SETTINGS START *****/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+}
+
+section{
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px;
+}
+
+
+/***** GENERAL SETTINGS START *****/
+
+
+
+/***** CONTACT SETTINGS START *****/
+
+.svg-contact img{
+    height: 100vh;
+    width: auto;
+    left: -5%;
+    bottom: -5%;
+    position: absolute;
+}
+
+#contact-headline{
+    z-index: 3000;
+      position: absolute;
+      left: 70%;
+      top: 20%;
+      text-align: center;
+      justify-content: center;
+      transform: translate(-50%,-50%);
+
+  }
+
+#contact-headline h1{
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive;
+    z-index: 3000;
+    font-size: 3.5em;
+
+}
+
+#contact-details{
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.8em;
+    position: absolute;
+    top: 10%;
+    height: auto;
+    width: 25%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+
+
+}
+
+.info{
+    height: 50%;
+    text-align: center;
+    justify-content: center;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#phone, #email, #location{
+    padding: 35px;
+    margin: 10px;
+}
+
+#phone{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #ffd082;
+}
+
+#email{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: #ccafaf;
+}
+
+#location{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: #7ebdb4;
+}
+
+#contact-details a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: aliceblue;
+    transform: translate(-50%,-50%);
+
+}
+
+#contact-headline{
+    color: #fafafa;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/***** CONTACT SETTINGS END *****/
+
+
+@media only screen and (max-width: 1024px){
+
+    #about-headline{
+        font-size: 1.2em;;
+        font-family: 'Indie Flower', cursive;
+        text-transform: uppercase;
+        left:5%;
+        top:10%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        transform: rotate(-20deg);
+    }
+    
+    
+    .svg-about img{
+        height: 50vh;
+        width: auto;
+        left: -5%;
+        bottom: -10%;
+        position: absolute;
+    }
+
+
+    #about-p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5em;
+        top: 25%;
+        left: 4%;
+        height: 50vh;
+        width: 95%;
+        position: absolute;
+    }
+    #about-card-1{
+        left: 5%;
+        top: 2%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 85%;
+        padding: 10px 10px;
+    
+    }
+    #about-card-2{
+        left: 5%;
+        top: 40%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 85%;
+        padding: 10px 10px;
+    }
+    #about-card-3{
+        left: 5%;
+        top: 80%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+        background: none;
+        transition: color 0.4s linear;
+    }
+
+    .svg-contact img{
+        height: 50vh;
+        width: auto;
+        left: -24%;
+        bottom: -3%;
+        position: absolute;
+    }
+    
+    #contact-headline{
+        z-index: 3000;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        text-align: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        font-size: 1.8em;
+    
+      }
+    
+    #contact-headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+    }
+    
+    #contact-details{
+        font-family: 'Fredoka One', cursive;
+        font-size: 0.8em;
+        position: absolute;
+        top: 7%;
+        left: 20%;
+        height: 80vh;
+        width: 60%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    
+    }
+    
+    .info{
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+   
+
+    #contact-details a{
+        font-size: 1.5em;
+        text-decoration: none;
+        color: aliceblue;
+    
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    #headline{
+        font-size: 0.8em;
+    }
+    #subheadline{
+        font-size: 0.5em;
+    }
+    #hero-btn{
+        font-size: 1em;
+    }
+
+    #about-headline{
+        font-size: 0.7em;;
+        font-family: 'Indie Flower', cursive;
+        text-transform: uppercase;
+        left:5%;
+        top:10%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        transform: rotate(-10deg);
+    }
+    .svg-about img{
+        height: 50vh;
+        width: auto;
+        left: 0%;
+        bottom: -10%;
+        position: absolute;
+    }
+
+    #about-p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 1em;
+        top: 18%;
+        left: 6%;
+        height: 50vh;
+        width: 95%;
+        position: absolute;
+    }
+    
+    #about-card-1{
+        left: 5%;
+        top: 2%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    
+    }
+    #about-card-2{
+        left: 5%;
+        top: 40%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    }
+    #about-card-3{
+        left: 5%;
+        top: 80%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+        background: none;
+        transition: color 0.4s linear;
+    }
+
+
+
+    .svg-contact img{
+        height: 50vh;
+        width: auto;
+        left: -23%;
+        bottom: -3%;
+        position: absolute;
+    }
+    
+    #contact-headline{
+        z-index: 3000;
+        position: absolute;
+        left: 52%;
+        top: 15%;
+        text-align: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        font-size: 1.2em;
+    
+      }
+    
+    #contact-headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+    }
+    
+    #contact-details{
+        font-family: 'Fredoka One', cursive;
+        font-size: 0.8em;
+        position: absolute;
+        top: 7%;
+        left: 18%;
+        height: 80vh;
+        width: 70%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    
+    }
+    
+    .info{
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+   
+
+    #contact-details a{
+        font-size: 1em;
+        text-decoration: none;
+        color: aliceblue;
+    
+    }
+
+    #phone, #email, #location{
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    
+    #headline{
+        z-index: 3000;
+          position: absolute;
+          left: 53%;
+          top: 25%;
+          text-align: center;
+          justify-content: center;
+          transform: translate(-50%,-50%);
+    
+      }
+    
+    #headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+        font-size: 3em;
+
+    }
+    
+    #subheadline{
+        z-index: 3000;
+          position: absolute;
+          left: 53%;
+          top: 42%;
+          text-align: center;
+          justify-content: center;
+          transform: translate(-50%,-50%);
+    
+      }
+    
+    #subheadline h1{
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+        font-size: 3em;
+
+    }
+    
+    #hero-btn{
+        z-index: 3000;
+          position: absolute;
+          left: 53%;
+          top: 65%;
+          text-align: center;
+          justify-content: center;
+          transform: translate(-50%,-50%);
+          font-size: 1em;
+    
+      }
+    
+    
+      #about-headline h1{
+        font-size: 2.5em;
+    }
+    
+    #about-p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 0.7em;
+        top: 18%;
+        left: 7%;
+        height: 50vh;
+        width: 95%;
+        position: absolute;
+    }
+    #about-card-1{
+        left: 5%;
+        top: 2%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    
+    }
+    #about-card-2{
+        left: 5%;
+        top: 40%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    }
+    #about-card-3{
+        left: 5%;
+        top: 80%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+        background: none;
+        transition: color 0.4s linear;
+    }
+
+    .svg-contact img{
+        height: 40vh;
+        width: auto;
+        left: -43%;
+        bottom: -3%;
+        position: absolute;
+    }
+    
+    #contact-headline{
+        z-index: 3000;
+        position: absolute;
+        left: 54%;
+        top: 15%;
+        text-align: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        font-size: 0.6em;
+    
+      }
+    
+    #contact-headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+    }
+    
+    #contact-details{
+        font-family: 'Fredoka One', cursive;
+        font-size: 1em;
+        position: absolute;
+        top: 23%;
+        left: 5%;
+        height: 50vh;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    
+    }
+    
+    .info{
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+   
+
+    #contact-details a{
+        font-size: 0.8em;
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #phone h3, #email h3, #location h3{
+        font-size: 0.7em;
+    }
+
+    #phone, #email, #location{
+        padding: 10px;
+        margin: 10px;
+    }  
+
+}

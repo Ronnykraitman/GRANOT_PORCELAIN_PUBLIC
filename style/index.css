@@ -1,0 +1,805 @@
+
+
+
+/***** GLOBAL SETTINGS START *****/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+}
+
+
+section{
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px;
+}
+
+.btn-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #2ecc71;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+  }
+  .btn-top:hover {
+    background-color: #27ae60;
+    outline: none;
+  }
+
+
+/***** GLOBAL SETTINGS END *****/
+
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+#scrollpath{
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(225, 225, 225, 0.05);
+}
+
+#progressbar{
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(89deg, #ff6a00, #ee0979);
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll{
+    0%, 100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(89deg, #ff6a00, #ee0979);
+    filter: blur(10px);
+
+}
+
+#progressbar:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(89deg, #ff6a00, #ee0979);
+    filter: blur(10px);
+
+}
+/***** SCROLL SETTINGS END *****/
+
+
+
+
+
+
+/***** HOME SETTINGS START *****/
+
+#home-video{
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: initial;
+    -webkit-background-composite: initial;
+
+}
+
+#home-video-cover{
+    z-index: 1000;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.7;
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto;
+    height: auto;
+  }
+
+  #headline{
+    z-index: 3000;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      text-align: center;
+      justify-content: center;
+      transform: translate(-50%,-50%);
+      font-size: 1.8em;
+
+  }
+
+#headline h1{
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive;
+    z-index: 3000;
+}
+
+#subheadline{
+    z-index: 3000;
+      position: absolute;
+      left: 50%;
+      top: 42%;
+      text-align: center;
+      justify-content: center;
+      transform: translate(-50%,-50%);
+      font-size: 0.8em;
+
+  }
+
+#subheadline h1{
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive;
+    z-index: 3000;
+}
+
+#hero-btn{
+    z-index: 3000;
+      position: absolute;
+      left: 50%;
+      top: 60%;
+      text-align: center;
+      justify-content: center;
+      transform: translate(-50%,-50%);
+      font-size: 2em;
+
+  }
+
+#hero-btn-col a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive;
+    z-index: 3000;
+    padding: 20px 30px;
+    background: linear-gradient(89deg, #ff6a00, #ee0979);
+    background-size: 400% 400%;
+    -webkit-animation: hero-btn 5s ease infinite;
+    -moz-animation: hero-btn 5s ease infinite;
+    animation: hero-btn 5s ease infinite;
+    border-radius: 70px;
+    transition: all .5s ease-in-out;
+}
+
+@-webkit-keyframes hero-btn {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@-moz-keyframes hero-btn {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@keyframes hero-btn {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+
+
+/***** HOME SETTINGS END *****/
+
+
+
+
+/***** ABOUT SETTINGS START *****/
+
+#about-headline{
+    font-size: 1.5em;;
+    font-family: 'Indie Flower', cursive;
+    text-transform: uppercase;
+    left:5%;
+    top:15%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+.svg-about img{
+    height: 100vh;
+    width: auto;
+    left: 0%;
+    bottom: -20%;
+    position: absolute;
+}
+#about-p{
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2em;
+    top: 10%;
+    left: 35%;
+    height: 80vh;
+    width: 60%;
+    position: absolute;
+}
+
+#about-card-1{
+    left: 17%;
+    top: 10%;
+    position: absolute;
+    text-align: left;
+    justify-content: center;
+    width: 35%;
+    padding: 10px 10px;
+
+
+}
+
+#about-card-2{
+    left: 60%;
+    top: 30%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    width: 35%;
+    padding: 10px 10px;
+}
+#about-card-3{
+    left: 12%;
+    top: 60%;
+    position: absolute;
+    text-align: left;
+    justify-content: center;
+    width: 35%;
+    padding: 10px 10px;
+    background: none;
+    transition: color 0.4s linear;
+}
+#about-card-1-word{
+
+    background: #00BFA6;
+}
+#about-card-2-word{
+    background: #8481C3;
+}
+#about-card-3-word{
+    background: #F9A826;
+}
+
+/***** ABOUT SETTINGS END *****/
+
+
+
+/***** MEDIA QUERIES SETTINGS START *****/
+
+
+@media only screen and (max-width: 1024px){
+
+    #about-headline{
+        font-size: 1.2em;;
+        font-family: 'Indie Flower', cursive;
+        text-transform: uppercase;
+        left:5%;
+        top:10%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        transform: rotate(-20deg);
+    }
+    
+    
+    .svg-about img{
+        height: 50vh;
+        width: auto;
+        left: 0%;
+        bottom: -10%;
+        position: absolute;
+    }
+
+
+    #about-p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5em;
+        top: 25%;
+        left: 4%;
+        height: 50vh;
+        width: 95%;
+        position: absolute;
+    }
+    #about-card-1{
+        left: 5%;
+        top: 2%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 85%;
+        padding: 10px 10px;
+    
+    }
+    #about-card-2{
+        left: 5%;
+        top: 40%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 85%;
+        padding: 10px 10px;
+    }
+    #about-card-3{
+        left: 5%;
+        top: 80%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+        background: none;
+        transition: color 0.4s linear;
+    }
+
+    .svg-contact img{
+        height: 50vh;
+        width: auto;
+        left: -24%;
+        bottom: -3%;
+        position: absolute;
+    }
+    
+    #contact-headline{
+        z-index: 3000;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        text-align: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        font-size: 1.8em;
+    
+      }
+    
+    #contact-headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+    }
+    
+    #contact-details{
+        font-family: 'Fredoka One', cursive;
+        font-size: 0.8em;
+        position: absolute;
+        top: 7%;
+        left: 20%;
+        height: 80vh;
+        width: 60%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    
+    }
+    
+    .info{
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+   
+
+    #contact-details a{
+        font-size: 1.5em;
+        text-decoration: none;
+        color: aliceblue;
+    
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #headline{
+        font-size: 0.8em;
+    }
+    #subheadline{
+        font-size: 0.5em;
+    }
+    #hero-btn{
+        font-size: 1em;
+    }
+
+    #about-headline{
+        font-size: 0.7em;;
+        font-family: 'Indie Flower', cursive;
+        text-transform: uppercase;
+        left:5%;
+        top:10%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        transform: rotate(-10deg);
+    }
+    .svg-about img{
+        height: 50vh;
+        width: auto;
+        left: 0%;
+        bottom: -10%;
+        position: absolute;
+    }
+
+    #about-p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 1em;
+        top: 18%;
+        left: 6%;
+        height: 50vh;
+        width: 95%;
+        position: absolute;
+    }
+    
+    #about-card-1{
+        left: 5%;
+        top: 2%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    
+    }
+    #about-card-2{
+        left: 5%;
+        top: 40%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    }
+    #about-card-3{
+        left: 5%;
+        top: 80%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+        background: none;
+        transition: color 0.4s linear;
+    }
+
+
+
+    .svg-contact img{
+        height: 50vh;
+        width: auto;
+        left: -23%;
+        bottom: -3%;
+        position: absolute;
+    }
+    
+    #contact-headline{
+        z-index: 3000;
+        position: absolute;
+        left: 52%;
+        top: 15%;
+        text-align: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        font-size: 1.2em;
+    
+      }
+    
+    #contact-headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+    }
+    
+    #contact-details{
+        font-family: 'Fredoka One', cursive;
+        font-size: 0.8em;
+        position: absolute;
+        top: 7%;
+        left: 18%;
+        height: 80vh;
+        width: 70%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    
+    }
+    
+    .info{
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+   
+
+    #contact-details a{
+        font-size: 1em;
+        text-decoration: none;
+        color: aliceblue;
+    
+    }
+
+    #phone, #email, #location{
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    
+    ::-webkit-scrollbar{
+        width: 0;
+    }
+    
+    #scrollpath{
+        z-index: 5000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 300%;
+        background: rgba(225, 225, 225, 0.05);
+    }
+    
+    #progressbar{
+        z-index: 5000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        background: linear-gradient(89deg, #ff6a00, #ee0979);
+        animation: scroll 10s linear infinite;
+    }
+    
+    @keyframes scroll{
+        0%, 100%{
+            filter: hue-rotate(0deg);
+        }
+        50%{
+            filter: hue-rotate(360deg);
+        }
+    }
+    
+    #progressbar:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300%;
+        background: linear-gradient(89deg, #ff6a00, #ee0979);
+        filter: blur(5px);
+    
+    }
+    
+    #progressbar:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300%;
+        background: linear-gradient(89deg, #ff6a00, #ee0979);
+        filter: blur(10px);
+    
+    }
+
+    #headline{
+        z-index: 3000;
+          position: absolute;
+          left: 53%;
+          top: 25%;
+          text-align: center;
+          justify-content: center;
+          transform: translate(-50%,-50%);
+    
+      }
+    
+    #headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+        font-size: 3em;
+
+    }
+    
+    #subheadline{
+        z-index: 3000;
+          position: absolute;
+          left: 53%;
+          top: 42%;
+          text-align: center;
+          justify-content: center;
+          transform: translate(-50%,-50%);
+    
+      }
+    
+    #subheadline h1{
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+        font-size: 3em;
+
+    }
+    
+    #hero-btn{
+        z-index: 3000;
+          position: absolute;
+          left: 53%;
+          top: 65%;
+          text-align: center;
+          justify-content: center;
+          transform: translate(-50%,-50%);
+          font-size: 1em;
+    
+      }
+    
+    
+      #about-headline h1{
+        font-size: 2.5em;
+    }
+    
+    #about-p{
+        font-family: 'Fredoka One', cursive;
+        font-size: 0.7em;
+        top: 18%;
+        left: 7%;
+        height: 50vh;
+        width: 95%;
+        position: absolute;
+    }
+    #about-card-1{
+        left: 5%;
+        top: 2%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    
+    }
+    #about-card-2{
+        left: 5%;
+        top: 40%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+    }
+    #about-card-3{
+        left: 5%;
+        top: 80%;
+        position: absolute;
+        text-align: left;
+        justify-content: center;
+        width: 95%;
+        padding: 10px 10px;
+        background: none;
+        transition: color 0.4s linear;
+    }
+
+    .svg-contact img{
+        height: 40vh;
+        width: auto;
+        left: -32%;
+        bottom: -3%;
+        position: absolute;
+    }
+    
+    #contact-headline{
+        z-index: 3000;
+        position: absolute;
+        left: 54%;
+        top: 15%;
+        text-align: center;
+        justify-content: center;
+        transform: translate(-50%,-50%);
+        font-size: 0.6em;
+    
+      }
+    
+    #contact-headline h1{
+        text-transform: uppercase;
+        color: whitesmoke;
+        font-family: 'Fredoka One', cursive;
+        z-index: 3000;
+    }
+    
+    #contact-details{
+        font-family: 'Fredoka One', cursive;
+        font-size: 1em;
+        position: absolute;
+        top: 23%;
+        left: 5%;
+        height: 50vh;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+    
+    }
+    
+    .info{
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+   
+
+    #contact-details a{
+        font-size: 0.8em;
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    #phone h3, #email h3, #location h3{
+        font-size: 0.7em;
+    }
+
+    #phone, #email, #location{
+        padding: 10px;
+        margin: 10px;
+    }
+   
+}
+
+/***** MEDIA QUERIES SETTINGS END *****/

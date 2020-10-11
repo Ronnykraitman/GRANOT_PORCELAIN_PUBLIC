@@ -1,0 +1,262 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff2e5;
+}
+
+section{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 100px;
+    background-color: #fff2e5;
+
+}
+#cart_section{
+    width: 100%;
+    height: 70vh;
+    background: #fff2e5;
+
+}
+
+h1{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    position: absolute;
+    text-transform: uppercase;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #3ca59d;
+    padding-bottom: 15px;
+    border-bottom: 5px solid #ff3796 ;
+}
+
+.table-responsive{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: calc(50vh - 200px);
+    overflow-y: auto;
+}
+
+#item_link{
+    padding: 3px;
+    text-decoration: none;
+    color: #ff3796;
+    transition: 0.5s;
+}
+
+
+
+#item_link:hover{
+    background-color: #3ca59d;
+    color:white;
+}
+
+video{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: initial;
+    -webkit-background-composite: initial;
+}
+
+#between1, #between2{
+
+    width: 100%;
+    height: 25vh;
+    opacity: 0.5;
+    background: -webkit-linear-gradient(to right, #ff3796, #3ca59d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff3796, #3ca59d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#details_section{
+    width: 100%;
+    height: 70vh;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #3ca59d;
+    padding-bottom: 15px;
+    border-bottom: 5px solid #ff3796 ;
+}
+#details{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    text-align: center;
+
+
+}
+
+#client_form{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 40%;
+    left: 50%;
+    margin-top: 2px;
+    transform: translate(-50%,-50%);
+
+}
+input{
+    width: 50%;
+    padding: 3px;
+    margin: 1px;
+
+}
+
+#submit_form{
+    padding: 3px;
+    margin-top: 10px;
+    width: 35%;
+    border: 1px solid #ff3796;
+    background:transparent ;
+    transition: 0.5s;
+}
+
+#submit_form:hover{
+    background:#ff3796 ;
+    color: white;
+}
+
+
+#total_price{
+    color: #3ca59d;
+}
+
+#paypal_section{
+    width: 100%;
+    height: 70vh;
+}
+
+#paypal_div{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+
+
+}
+#paypal-button-container{
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left: 50%;
+    width: 50%;
+    position: absolute;
+    height: calc(100vh - 500px);
+    overflow-y: auto;
+    padding: 65px;
+    margin-top: 10px;
+
+}
+
+#plus, #minus{
+    text-decoration: none;
+    color: #ff3796;
+    font-size: 1.5em;
+    transition: 0.5s;
+    padding:3px;
+}
+#plus:hover,#minus:hover{
+    color: #3ca59d;
+}
+
+
+@media only screen and (max-width: 420px){
+    h1{
+        font-size: 1.2em;
+    }
+    .table-responsive{
+
+        overflow-y: auto;
+        font-size: 0.5em;
+        width: 90%;        
+        height: calc(50vh - 100px);
+    }
+
+    #between1, #between2{
+        height: 10vh;
+    }
+
+    h2{
+        width: 90%;
+        font-size: 1.2em;
+    }
+   
+    
+    input{
+        width: 95%;
+        padding: 3px;
+        margin: 1px;
+    
+    }
+    
+    #submit_form{
+        font-size: 0.9em;
+        width: 80%;
+    }
+
+    #paypal_section{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    #paypal_div{
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 52%;
+        transform: translate(-50%,-50%);
+        
+    
+    
+    }
+    #paypal-button-container{
+        width: 100%;
+
+        transform: translate(-50%,-50%);
+        top: 25%;
+        left: 50%;
+        width: 100%;
+        position: absolute;
+        height: calc(100vh - 300px);
+        overflow-y: auto;
+        padding: 65px;
+        margin-top: 10px;
+    
+    }
+}
+
+
+

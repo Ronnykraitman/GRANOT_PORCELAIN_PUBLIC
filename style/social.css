@@ -1,0 +1,82 @@
+body{
+
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+
+}
+
+.social{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .banner{
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+  
+  .banner i.fa{
+    padding: 5px;
+    margin: auto;
+    background: #f4f9f4;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 25vw;
+    text-align: center;
+    color: #000000;
+    line-height: 100vh;
+    mix-blend-mode: screen;
+  }
+  
+  #iicon:hover{
+    color: #f4f9f4;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    cursor: pointer;
+  
+  }
+  #ficon:hover{
+    color: #f4f9f4;
+    background:linear-gradient(120deg, #3b5998, #95ade0, #f7f7f7);
+    cursor: pointer;
+  
+  }
+  #ticon:hover{
+    color: #f4f9f4;
+    background:linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
+    cursor: pointer;
+  
+  }
+  #yicon:hover{
+    color: #f4f9f4;
+   background:linear-gradient(120deg, #ff0000, #282828);
+    cursor: pointer;
+  
+  }
+  a{
+    width: 100%;
+  }
+
+
+  

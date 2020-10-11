@@ -1,0 +1,355 @@
+
+
+#mynav{
+    width: 100%;
+    position: fixed;
+    z-index: 4000;
+    justify-content: space-evenly;
+
+}
+
+ #menuToggle
+ {
+    justify-content: space-evenly;
+
+   display: block;
+   position: relative;
+   top: 50px;
+   left: 50px;
+   z-index: 1;
+
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: whitesmoke;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ 
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #FF4E50;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to top, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to top, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+
+
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+
+   transform-origin: 0% 100%;
+
+
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: whitesmoke;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+   position: absolute;
+   width: 20%;
+
+   margin: -100px 0 0 -60px;
+   padding: 80px;
+   padding-top: 125px;
+   opacity: 0.9;
+   background: linear-gradient(89deg, #ff6a00, #ee0979);
+   background-size: 400% 400%;
+   -webkit-animation: mynav 5s ease infinite;
+   -moz-animation: mynav 5s ease infinite;
+   animation: mynav 5s ease infinite;
+   border-radius: 30px;
+   transition: all .5s ease-in-out;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+@-webkit-keyframes mynav {
+   0%{background-position:0% 49%}
+   50%{background-position:100% 52%}
+   100%{background-position:0% 49%}
+}
+@-moz-keyframes mynav {
+   0%{background-position:0% 49%}
+   50%{background-position:100% 52%}
+   100%{background-position:0% 49%}
+}
+@keyframes mynav {
+   0%{background-position:0% 49%}
+   50%{background-position:100% 52%}
+   100%{background-position:0% 49%}
+}
+
+
+ #menu li
+ {
+    justify-content: space-around;
+    padding: 5px 30px;
+    font-size: 2em;
+ 
+ }
+
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+/***** NAVBAR SETTINGS END *****/
+
+@media only screen and (max-width: 1024px){
+
+ #menuToggle
+  {
+     justify-content: space-evenly;
+ 
+    display: block;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    z-index: 1;
+ 
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+
+  #menu
+  {
+ 
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+    position: absolute;
+    width: 50%;
+ 
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    opacity: 0.9;
+    
+    
+ 
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  #menu li
+  {
+     justify-content: space-around;
+     padding: 5px 30px;
+     font-size: 2em;
+  
+  }
+
+  #menuToggle span
+  {
+    display: block;
+    width: 45px;
+    height: 8px;
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+
+  #menuToggle
+  {
+     justify-content: space-evenly;
+ 
+    display: block;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    z-index: 1;
+ 
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+
+  #menu
+  {
+ 
+     font-family: 'Indie Flower', cursive;
+     text-align: center;
+    position: absolute;
+    width: 50%;
+ 
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    opacity: 0.9;
+
+    
+    
+ 
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  #menu li
+  {
+     justify-content: space-around;
+     padding: 5px 30px;
+     font-size: 1.5em;
+  
+  }
+}
+
+@media only screen and (max-width: 420px){
+    
+  #menu li
+  {
+     justify-content: space-around;
+     display: inline;
+     padding: 5px 50px;
+     font-size: 1.3em;
+  
+  }
+
+   #menuToggle
+   {
+      justify-content: space-evenly;
+  
+     display: block;
+     position: relative;
+     top: 25px;
+     left: 20px;
+     z-index: 1;
+  
+     -webkit-user-select: none;
+     user-select: none;
+   }
+   
+
+   #menu
+   {
+  
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+     position: absolute;
+     width: 75%;
+  
+     margin: -100px 0 0 -50px;
+     padding: 50px;
+     padding-top: 125px;
+     opacity: 0.9;
+
+     list-style-type: none;
+     -webkit-font-smoothing: antialiased;
+     /* to stop flickering of text in safari */
+     
+     transform-origin: 0% 0%;
+     transform: translate(-100%, 0);
+     
+     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   }
+
+   #menuToggle span{
+    width: 33px;
+    height: 4px;
+   }
+
+}

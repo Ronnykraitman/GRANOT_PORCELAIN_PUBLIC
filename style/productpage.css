@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #fff2e5; 
+
+}
+
+img{
+    width: 100%;
+    height: auto;
+    box-shadow: -15px -15px 15px  rgba(255, 255, 255, 0.2),
+    15px 15px 15px   rgba(0, 0, 0, 0.1);
+}
+h1{
+    font-size: 5em;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #3ca59d;
+    padding-bottom: 15px;
+}
+
+.container-fluid{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.details-div{
+    font-size: 1.2em;
+    position: absolute;
+    text-align: left;
+    font-family: 'Concert One', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #fff2e5; 
+
+}
+
+img{
+    width: 100%;
+    height: auto;
+    box-shadow: -15px -15px 15px  rgba(255, 255, 255, 0.2),
+    15px 15px 15px   rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+
+}
+
+
+.details-div{
+    font-size: 1.em;
+    position: absolute;
+    text-align: left;
+    font-family: 'Concert One', cursive;
+    text-transform: uppercase;
+}
+
+.back{
+    position: absolute;
+    top: 120%;
+    left: 1%;
+    cursor: pointer;
+    padding: 5px;
+    background-color: coral;
+    transition: 0.3s ease;
+
+}
+
+.back a{
+    text-decoration: none;
+    color: cornsilk;
+    
+}
+
+.back a:hover{
+    text-decoration: none;
+}
+
+.back:hover{
+    background-color: #3ca59d;
+    transition: 0.3s ease;
+
+}
+
+
+#submit_form{
+    background-color: white;
+    width: 20%;
+    border: none;
+    transition: 0.5s;
+    margin: 1px;
+
+
+
+}
+
+#submit_form:hover{
+    background-color: #ff3796 ;
+    color: white;
+}
+
+#quantity_form{
+    background-color: white;
+    width: 15%;
+    text-align: left;
+    border: none;
+    transition: 0.5s;
+    margin: 1px;
+}
+#product_actions{
+    text-align: right;
+}
+
+#gallery_actions{
+    text-align: right;
+    z-index: 1000;
+    
+}
+
+@media only screen and (max-width: 420px){
+    h1{
+        font-size: 2em;
+        left: 52%;
+    }
+
+    .container-fluid{
+        top: 40%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    #img-col{
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+
+    }
+
+    .details-div{
+        position: absolute;
+        top: 200px;
+        left: 25%;
+        transform: translate(-50%,-50%);
+
+
+    }
+
+    .details-div p{
+        font-size: 0.7em;
+        text-align: left;
+    }
+
+    .details-div h2{
+        font-size: 0.9em;
+        text-align: left;
+    }
+
+    .back{
+        top: 250px;
+        left: 35%;
+    }
+
+}
