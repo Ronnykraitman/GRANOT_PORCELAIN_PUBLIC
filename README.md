@@ -1,1 +1,3 @@
-# GRANOT_PORCELAIN_PUBLIC
+# GRANOT PORCELAIN
+# High quality handmade pottery
+
